@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import GetInput from "./components/GetInput";
+import ShowResults from "./components/ShowResults";
 
 function App() {
+  const [link, setLink] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-lime-500 min-h-screen flex flex-col justify-center gap-5">
+      <GetInput setLink={setLink} />
+      <ShowResults link={link} />
     </div>
   );
 }
