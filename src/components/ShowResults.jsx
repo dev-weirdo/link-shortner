@@ -10,6 +10,7 @@ const ShowResults = ({ link }) => {
 
   const fetchData = () => {
     setLoading(true);
+    setCopied(false);
     axios
       .get(`https://api.shrtco.de/v2/shorten?url=${link}`)
       .then((res) => setShortenLink(res.data.result.full_short_link2))
