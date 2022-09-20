@@ -1,9 +1,15 @@
 import React from "react";
 import { Triangle } from "react-loader-spinner";
 
-const Loader = () => {
+const Loader = ({ loading }) => {
   return (
-    <div className="w-full flex justify-center items-center">
+    <div
+      className={
+        loading
+          ? "w-full flex justify-center items-center"
+          : "min-h-screen w-full flex justify-center items-center bg-white"
+      }
+    >
       <Triangle
         height="120"
         width="120"

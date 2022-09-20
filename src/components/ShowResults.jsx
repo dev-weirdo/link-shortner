@@ -25,7 +25,7 @@ const ShowResults = ({ link }) => {
   }, [link]);
 
   if (loading) {
-    return <Loader />;
+    return <Loader loading={loading} />;
   }
   return (
     <>
